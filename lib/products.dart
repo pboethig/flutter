@@ -4,10 +4,14 @@ class Products extends StatelessWidget {
   
   final List<String> products;
 
-  Products(this.products);
+  Products(this.products)
+  {
+    print('test1');
+  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {   
+    print('test2');
     return Column(
       children: products
           .map((element) => Card(

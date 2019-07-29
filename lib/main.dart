@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+import './pages/login.dart';
+void main() {
+  runApp(new App());
+}
 
-import './product_manager.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-
-  String product = 'a tester from outside'; 
-
+class App extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('My first cool App')),
-        body: Column(children: [
-          ProductManager(product),
-        ]),
+    return new MaterialApp(
+      title: 'Anmelden',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF2196f3),
+        accentColor: const Color(0xFF2196f3),
+        canvasColor: const Color(0xFFfafafa),
       ),
+      home: new Login(),
     );
   }
 }
+
+
